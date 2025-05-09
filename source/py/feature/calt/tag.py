@@ -251,13 +251,13 @@ def get_lookup(cls_var: ast.Clazz):
         ),
         ast.subst_liga(
             source="MARK:",
-            target="tag_todo.liga",
+            target="tag_mark.liga",
             lookup_name="mark_colon"
         ),
-        # ast.subst_liga(
-        #     source="NOTE:",
-        #     target="tag_todo.liga",
-        #     lookup_name="note_colon"
-        # ),
+        ast.subst_liga(
+            source="NOTE:",
+            target="tag_todo.liga",
+            lookup_name="note_colon"
+        ),
         # =========================================================
     ]
