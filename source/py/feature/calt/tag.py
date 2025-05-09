@@ -234,8 +234,9 @@ def get_lookup(cls_var: ast.Clazz):
         # ---------------------------------------------------------
         tag_custom(
             [
-                # ("_bug_", "[bug]"),
-                # ("_noqa_", "(noqa)"),
+                (":attention:", "[attention]"),
+                ("_noqa_", "(noqa)"),
+                ("_bug_", "[bug]"),
             ],
             bg_cls_dict,
         ),
