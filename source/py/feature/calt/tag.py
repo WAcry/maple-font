@@ -14,6 +14,12 @@ built_in_tag_text = [
     "mark",
     "eror",
     "warning",
+    # "bug",
+    # "noqa",
+    # "verbose",
+    # "information",
+    # "critical",
+    # "tag"
 ]
 
 def tag_upper(text_list: list[str]):
@@ -237,15 +243,20 @@ def get_lookup(cls_var: ast.Clazz):
         #                Mark annotation in Xcode
         #             example: `// TODO: code review`
         # ---------------------------------------------------------
+        ast.subst_liga(
+            source="TODO:",
+            target="tag_todo.liga",
+            lookup_name="todo_colon"
+        ),
+        ast.subst_liga(
+            source="MARK:",
+            target="tag_todo.liga",
+            lookup_name="mark_colon"
+        ),
         # ast.subst_liga(
-        #     source="TODO:",
+        #     source="NOTE:",
         #     target="tag_todo.liga",
-        #     lookup_name="todo_colon"
-        # )
-        # ast.subst_liga(
-        #     source="MARK:",
-        #     target="tag_todo.liga",
-        #     lookup_name="mark_colon"
-        # )
+        #     lookup_name="note_colon"
+        # ),
         # =========================================================
     ]
