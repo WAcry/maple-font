@@ -1,19 +1,19 @@
 from source.py.feature import ast
 
 built_in_tag_text = [
-    "trace",
-    "debug",
-    "info",
-    "warn",
-    "error",
-    "fatal",
-    "todo",
-    "fixme",
-    "note",
-    "hack",
-    "mark",
-    "eror",
-    "warning",
+    # "trace",
+    # "debug",
+    # "info",
+    # "warn",
+    # "error",
+    # "fatal",
+    # "todo",
+    # "fixme",
+    # "note",
+    # "hack",
+    # "mark",
+    # "eror",
+    # "warning",
 ]
 
 def tag_upper(text_list: list[str]):
@@ -228,9 +228,9 @@ def get_lookup(cls_var: ast.Clazz):
         # ---------------------------------------------------------
         tag_custom(
             [
-                ("[verbose]", "(VERBOSE)"),
-                ("[information]", "(INFORMATION)"),
-                ("[critical]", "(CRITICAL)")
+                # ("[verbose]", "(VERBOSE)"),
+                # ("[information]", "(INFORMATION)"),
+                # ("[critical]", "(CRITICAL)")
             ],
             bg_cls_dict,
         ),
