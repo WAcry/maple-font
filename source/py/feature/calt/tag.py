@@ -13,13 +13,7 @@ built_in_tag_text = [
     "hack",
     "mark",
     "eror",
-    "warning",
-    # "bug",
-    # "noqa",
-    # "verbose",
-    # "information",
-    # "critical",
-    # "tag"
+    "warning"
 ]
 
 def tag_upper(text_list: list[str]):
@@ -234,9 +228,11 @@ def get_lookup(cls_var: ast.Clazz):
         # ---------------------------------------------------------
         tag_custom(
             [
-                (":attention:", "[attention]"),
-                ("_noqa_", "(noqa)"),
-                ("_bug_", "[bug]"),
+                ("[bug]", "(BUG)"),
+                ("[verbose]", "(VERBOSE)"),
+                ("[information]", "(INFORMATION)"),
+                ("[critical]", "(CRITICAL)"),
+                ("[tag]", "(TAG)"),
             ],
             bg_cls_dict,
         ),
@@ -258,6 +254,11 @@ def get_lookup(cls_var: ast.Clazz):
             source="NOTE:",
             target="tag_todo.liga",
             lookup_name="note_colon"
+        ),
+        ast.subst_liga(
+            source="INFO:",
+            target="tag_info.liga",
+            lookup_name="info_colon"
         ),
         # =========================================================
     ]
