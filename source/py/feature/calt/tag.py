@@ -222,7 +222,7 @@ def get_lookup(cls_var: ast.Clazz):
     return [
         ast.cls_states(*bg_cls_dict.values()),
         tag_upper(built_in_tag_text),
-        tag_any(["todo", "fixme"], cls_var),
+        # tag_any(["todo", "fixme"], cls_var),
         # =========================================================
         #                       Custom tags
         # ---------------------------------------------------------
