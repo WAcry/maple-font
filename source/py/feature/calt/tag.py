@@ -228,8 +228,9 @@ def get_lookup(cls_var: ast.Clazz):
         # ---------------------------------------------------------
         tag_custom(
             [
-                # ("_bug_", "[bug]"),
-                # ("_noqa_", "(noqa)"),
+                ("[verbose]", "(VERBOSE)"),
+                ("[information]", "(INFORMATION)"),
+                ("[critical]", "(CRITICAL)")
             ],
             bg_cls_dict,
         ),
@@ -241,11 +242,36 @@ def get_lookup(cls_var: ast.Clazz):
         #     source="TODO:",
         #     target="tag_todo.liga",
         #     lookup_name="todo_colon"
-        # )
+        # ),
         # ast.subst_liga(
         #     source="MARK:",
-        #     target="tag_todo.liga",
+        #     target="tag_mark.liga",
         #     lookup_name="mark_colon"
+        # ),
+        # ast.subst_liga(
+        #     source="INFO:",
+        #     target="tag_info.liga",
+        #     lookup_name="info_colon"
+        # ),
+        # ast.subst_liga(
+        #     source="ADHOC:",
+        #     target="tag_adhoc.liga",
+        #     lookup_name="adhoc_colon"
+        # ),
+        # ast.subst_liga(
+        #     source="todo:",
+        #     target="tag_todo.liga",
+        #     lookup_name="todo_colon"
+        # ),
+        # ast.subst_liga(
+        #     source="mark:",
+        #     target="tag_mark.liga",
+        #     lookup_name="mark_colon"
+        # ),
+        # ast.subst_liga(
+        #     source="info:",
+        #     target="tag_info.liga",
+        #     lookup_name="info_colon"
         # )
         # =========================================================
     ]
